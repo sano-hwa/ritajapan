@@ -1,138 +1,503 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>リタジャパン LP｜参考サイト分析</title>
-<style>
-:root{--bg:#f6f7f2;--sf:#fff;--tx:#1b2418;--mu:#5d6a57;--ac:#2f6b3a;--ac2:#d9e8d4;--bd:#dfe4d8;--hero:#1f4a29;--hero-tx:#f4f8ef;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121712;--sf:#1b221a;--tx:#e9efe4;--mu:#9aa894;--ac:#8fcf9a;--ac2:#243525;--bd:#2c372b;--hero:#0e1f12;--hero-tx:#eef5ea}}
-:root[data-theme="dark"]{--bg:#121712;--sf:#1b221a;--tx:#e9efe4;--mu:#9aa894;--ac:#8fcf9a;--ac2:#243525;--bd:#2c372b;--hero:#0e1f12;--hero-tx:#eef5ea}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;line-height:1.8}
-.w{max-width:1040px;margin:0 auto;padding:0 20px}
-header{background:var(--hero);color:var(--hero-tx);padding:72px 0 64px}
-header small{letter-spacing:.2em;opacity:.7;font-size:12px}
-header h1{font-size:clamp(28px,5vw,48px);line-height:1.35;margin:12px 0 16px}
-header p{max-width:620px;opacity:.85;margin:0}
-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
-nav a{color:var(--hero-tx);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:99px;font-size:13px;text-decoration:none}
-section{padding:56px 0;border-bottom:1px solid var(--bd)}
-h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 6px;line-height:1.4}
-.no{color:var(--ac);font-weight:700;letter-spacing:.15em;font-size:12px}
-.url{font-size:13px;color:var(--mu);word-break:break-all}
-.url a{color:var(--mu)}
-.big{font-size:clamp(20px,3.2vw,28px);font-weight:700;margin:18px 0 4px;line-height:1.5}
-.g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:22px}
-.c{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:20px}
-.c h3{margin:0 0 8px;font-size:15px;color:var(--ac)}
-.c p,.c ul{margin:0;font-size:14px}
-.c ul{padding-left:18px}
-.use{background:var(--ac2);border-radius:12px;padding:18px 20px;margin-top:16px;font-size:14px}
-.use b{display:block;font-size:12px;letter-spacing:.12em;color:var(--ac);margin-bottom:4px}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
-.tags span{font-size:12px;border:1px solid var(--bd);background:var(--sf);padding:3px 10px;border-radius:99px;color:var(--mu)}
-.flow{display:grid;gap:10px;margin-top:22px}
-.step{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:16px 18px;align-items:start}
-.step i{font-style:normal;font-weight:800;font-size:22px;color:var(--ac)}
-.step b{display:block}
-.step span{font-size:13px;color:var(--mu)}
-.step em{font-style:normal;font-size:11px;color:var(--ac);border:1px solid var(--ac);border-radius:99px;padding:0 8px;margin-left:6px;white-space:nowrap}
-.tbl{overflow-x:auto;margin-top:22px}
-table{border-collapse:collapse;width:100%;min-width:640px;font-size:13px;background:var(--sf)}
-th,td{border:1px solid var(--bd);padding:10px 12px;text-align:left;vertical-align:top}
-th{background:var(--ac2)}
-.note{font-size:12px;color:var(--mu);margin-top:20px}
-footer{padding:32px 0;font-size:12px;color:var(--mu)}
-</style>
-</head>
-<body>
-<header><div class="w">
-<small>RITA JAPAN LP — DESIGN DIRECTION</small>
-<h1>リタジャパンLP<br>参考サイト分析ボード</h1>
-<p>4つの参考サイトの特徴と、RETのLPへの活かし方をまとめました。ここから「想い → 世界観 → 人 → 余白」の方向性を定めます。</p>
-<nav><a href="#s1">01 molten</a><a href="#s2">02 TRADMAN'S</a><a href="#s3">03 DMJ採用</a><a href="#s4">04 Billboard Live</a><a href="#s5">方向性まとめ</a></nav>
-</div></header>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>リタジャパン LP｜参考サイト分析</title>
+    <style>
+      :root {
+        --bg: #f6f7f2;
+        --sf: #fff;
+        --tx: #1b2418;
+        --mu: #5d6a57;
+        --ac: #2f6b3a;
+        --ac2: #d9e8d4;
+        --bd: #dfe4d8;
+        --hero: #1f4a29;
+        --hero-tx: #f4f8ef;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #121712;
+          --sf: #1b221a;
+          --tx: #e9efe4;
+          --mu: #9aa894;
+          --ac: #8fcf9a;
+          --ac2: #243525;
+          --bd: #2c372b;
+          --hero: #0e1f12;
+          --hero-tx: #eef5ea;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #121712;
+        --sf: #1b221a;
+        --tx: #e9efe4;
+        --mu: #9aa894;
+        --ac: #8fcf9a;
+        --ac2: #243525;
+        --bd: #2c372b;
+        --hero: #0e1f12;
+        --hero-tx: #eef5ea;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--tx);
+        font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+        line-height: 1.8;
+      }
+      .w {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        background: var(--hero);
+        color: var(--hero-tx);
+        padding: 72px 0 64px;
+      }
+      header small {
+        letter-spacing: 0.2em;
+        opacity: 0.7;
+        font-size: 12px;
+      }
+      header h1 {
+        font-size: clamp(28px, 5vw, 48px);
+        line-height: 1.35;
+        margin: 12px 0 16px;
+      }
+      header p {
+        max-width: 620px;
+        opacity: 0.85;
+        margin: 0;
+      }
+      nav {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      nav a {
+        color: var(--hero-tx);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 6px 14px;
+        border-radius: 99px;
+        font-size: 13px;
+        text-decoration: none;
+      }
+      section {
+        padding: 56px 0;
+        border-bottom: 1px solid var(--bd);
+      }
+      h2 {
+        font-size: clamp(22px, 3.4vw, 30px);
+        margin: 0 0 6px;
+        line-height: 1.4;
+      }
+      .no {
+        color: var(--ac);
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        font-size: 12px;
+      }
+      .url {
+        font-size: 13px;
+        color: var(--mu);
+        word-break: break-all;
+      }
+      .url a {
+        color: var(--mu);
+      }
+      .big {
+        font-size: clamp(20px, 3.2vw, 28px);
+        font-weight: 700;
+        margin: 18px 0 4px;
+        line-height: 1.5;
+      }
+      .g {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        margin-top: 22px;
+      }
+      .c {
+        background: var(--sf);
+        border: 1px solid var(--bd);
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .c h3 {
+        margin: 0 0 8px;
+        font-size: 15px;
+        color: var(--ac);
+      }
+      .c p,
+      .c ul {
+        margin: 0;
+        font-size: 14px;
+      }
+      .c ul {
+        padding-left: 18px;
+      }
+      .use {
+        background: var(--ac2);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-top: 16px;
+        font-size: 14px;
+      }
+      .use b {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        color: var(--ac);
+        margin-bottom: 4px;
+      }
+      .tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .tags span {
+        font-size: 12px;
+        border: 1px solid var(--bd);
+        background: var(--sf);
+        padding: 3px 10px;
+        border-radius: 99px;
+        color: var(--mu);
+      }
+      .flow {
+        display: grid;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        gap: 14px;
+        background: var(--sf);
+        border: 1px solid var(--bd);
+        border-radius: 12px;
+        padding: 16px 18px;
+        align-items: start;
+      }
+      .step i {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        color: var(--ac);
+      }
+      .step b {
+        display: block;
+      }
+      .step span {
+        font-size: 13px;
+        color: var(--mu);
+      }
+      .step em {
+        font-style: normal;
+        font-size: 11px;
+        color: var(--ac);
+        border: 1px solid var(--ac);
+        border-radius: 99px;
+        padding: 0 8px;
+        margin-left: 6px;
+        white-space: nowrap;
+      }
+      .tbl {
+        overflow-x: auto;
+        margin-top: 22px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 640px;
+        font-size: 13px;
+        background: var(--sf);
+      }
+      th,
+      td {
+        border: 1px solid var(--bd);
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--ac2);
+      }
+      .note {
+        font-size: 12px;
+        color: var(--mu);
+        margin-top: 20px;
+      }
+      footer {
+        padding: 32px 0;
+        font-size: 12px;
+        color: var(--mu);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="w">
+        <small>RITA JAPAN LP — DESIGN DIRECTION</small>
+        <h1>リタジャパンLP<br />参考サイト分析ボード</h1>
+        <p>
+          4つの参考サイトの特徴と、RETのLPへの活かし方をまとめました。ここから「想い
+          → 世界観 → 人 → 余白」の方向性を定めます。
+        </p>
+        <nav>
+          <a href="#s1">01 molten</a><a href="#s2">02 TRADMAN'S</a
+          ><a href="#s3">03 DMJ採用</a><a href="#s4">04 Billboard Live</a
+          ><a href="#s5">方向性まとめ</a>
+        </nav>
+      </div>
+    </header>
 
-<section id="s1"><div class="w">
-<div class="no">REFERENCE 01</div>
-<h2>molten モルテンスポーツ事業本部</h2>
-<div class="url"><a href="https://sports.molten.co.jp/jp/">https://sports.molten.co.jp/jp/</a></div>
-<div class="big">「スポーツの報酬は感情だ。」</div>
-<div class="g">
-<div class="c"><h3>サイトの特徴</h3><p>「Our Vision」で理念を長めの文章で語り、その後に製品とアクションをカードで見せる構成。冒頭は複数枚のメインビジュアルが切り替わります。</p></div>
-<div class="c"><h3>構成の流れ</h3><ul><li>メインビジュアル</li><li>Our Vision（理念）</li><li>News / Pick Up</li><li>Products &amp; Actions（カード）</li><li>Action（取り組みの意義）</li></ul></div>
-<div class="c"><h3>ポイント</h3><ul><li>カードに「Product」「Action」のラベル</li><li>製品と社会的な取り組みを同列に並べる</li><li>末尾に「feel the emotion」のロゴで締める</li></ul></div>
-</div>
-<div class="use"><b>RETのLPへの活かし方</b>最初に想いを伝え、続けて製品の強みを見せる流れをLP構成の参考にします。</div>
-<div class="tags"><span>理念ファースト</span><span>カードUI</span><span>ラベル分類</span><span>キャッチで締め</span></div>
-</div></section>
+    <section id="s1">
+      <div class="w">
+        <div class="no">REFERENCE 01</div>
+        <h2>molten モルテンスポーツ事業本部</h2>
+        <div class="url">
+          <a href="https://sports.molten.co.jp/jp/"
+            >https://sports.molten.co.jp/jp/</a
+          >
+        </div>
+        <div class="big">「スポーツの報酬は感情だ。」</div>
+        <div class="g">
+          <div class="c">
+            <h3>サイトの特徴</h3>
+            <p>
+              「Our
+              Vision」で理念を長めの文章で語り、その後に製品とアクションをカードで見せる構成。冒頭は複数枚のメインビジュアルが切り替わります。
+            </p>
+          </div>
+          <div class="c">
+            <h3>構成の流れ</h3>
+            <ul>
+              <li>メインビジュアル</li>
+              <li>Our Vision（理念）</li>
+              <li>News / Pick Up</li>
+              <li>Products &amp; Actions（カード）</li>
+              <li>Action（取り組みの意義）</li>
+            </ul>
+          </div>
+          <div class="c">
+            <h3>ポイント</h3>
+            <ul>
+              <li>カードに「Product」「Action」のラベル</li>
+              <li>製品と社会的な取り組みを同列に並べる</li>
+              <li>末尾に「feel the emotion」のロゴで締める</li>
+            </ul>
+          </div>
+        </div>
+        <div class="use">
+          <b>RETのLPへの活かし方</b
+          >最初に想いを伝え、続けて製品の強みを見せる流れをLP構成の参考にします。
+        </div>
+        <div class="tags">
+          <span>理念ファースト</span><span>カードUI</span><span>ラベル分類</span
+          ><span>キャッチで締め</span>
+        </div>
+      </div>
+    </section>
 
-<section id="s2"><div class="w">
-<div class="no">REFERENCE 02</div>
-<h2>TRADMAN'S BONSAI</h2>
-<div class="url"><a href="https://tradmans.jp/">https://tradmans.jp/</a></div>
-<div class="big">伝統 × 現代の感性。素材そのものを主役に。</div>
-<div class="g">
-<div class="c"><h3>サイトの特徴</h3><p>写真を大きく見せ、世界観が伝わるデザイン。盆栽という素材の質感を前面に出し、ストリートカルチャーやファッションと融合させたブランドとして見せています。</p></div>
-<div class="c"><h3>構成の流れ</h3><ul><li>ブランドロゴ＋キービジュアル</li><li>NEWS</li><li>ABOUT（ミッション）</li><li>STAFF（人物ごとに写真）</li><li>GALLERY</li></ul></div>
-<div class="c"><h3>ポイント</h3><ul><li>ABOUTは日英の2言語で併記</li><li>メニューは英字ラベルで統一</li><li>STAFFは人柄が伝わるプロフィール</li></ul></div>
-</div>
-<div class="use"><b>RETのLPへの活かし方</b>芝の質感と自然を活かし、RETの魅力を伝えるデザインに仕上げます。</div>
-<div class="tags"><span>大きな写真</span><span>素材の質感</span><span>英字ラベル</span><span>GALLERY</span></div>
-</div></section>
+    <section id="s2">
+      <div class="w">
+        <div class="no">REFERENCE 02</div>
+        <h2>TRADMAN'S BONSAI</h2>
+        <div class="url">
+          <a href="https://tradmans.jp/">https://tradmans.jp/</a>
+        </div>
+        <div class="big">伝統 × 現代の感性。素材そのものを主役に。</div>
+        <div class="g">
+          <div class="c">
+            <h3>サイトの特徴</h3>
+            <p>
+              写真を大きく見せ、世界観が伝わるデザイン。盆栽という素材の質感を前面に出し、ストリートカルチャーやファッションと融合させたブランドとして見せています。
+            </p>
+          </div>
+          <div class="c">
+            <h3>構成の流れ</h3>
+            <ul>
+              <li>ブランドロゴ＋キービジュアル</li>
+              <li>NEWS</li>
+              <li>ABOUT（ミッション）</li>
+              <li>STAFF（人物ごとに写真）</li>
+              <li>GALLERY</li>
+            </ul>
+          </div>
+          <div class="c">
+            <h3>ポイント</h3>
+            <ul>
+              <li>ABOUTは日英の2言語で併記</li>
+              <li>メニューは英字ラベルで統一</li>
+              <li>STAFFは人柄が伝わるプロフィール</li>
+            </ul>
+          </div>
+        </div>
+        <div class="use">
+          <b>RETのLPへの活かし方</b
+          >芝の質感と自然を活かし、RETの魅力を伝えるデザインに仕上げます。
+        </div>
+        <div class="tags">
+          <span>大きな写真</span><span>素材の質感</span><span>英字ラベル</span
+          ><span>GALLERY</span>
+        </div>
+      </div>
+    </section>
 
-<section id="s3"><div class="w">
-<div class="no">REFERENCE 03</div>
-<h2>採用情報｜デジタルマーケティングジャパン</h2>
-<div class="url"><a href="https://dmj-japan.co.jp/recruit/">https://dmj-japan.co.jp/recruit/</a></div>
-<div class="big">「大人の青春は、やり切った先にある。」</div>
-<div class="g">
-<div class="c"><h3>サイトの特徴</h3><p>力強いキャッチコピーと社員の大きな写真で、熱量を伝える構成。見出しは画像化された文字で、強い存在感を出しています。</p></div>
-<div class="c"><h3>構成の流れ</h3><ul><li>冒頭のキャッチコピー</li><li>「大人の青春を創る。」＋5つのCREATE（熱中／挑戦／成長／仲間／充実）</li><li>CEO MESSAGE</li><li>MEMBER（人物写真）</li><li>WE BUILD → ENTRY</li></ul></div>
-<div class="c"><h3>ポイント</h3><ul><li>メンバーは「英字名＋一言＋人柄」</li><li>価値観に連番（#01〜#05）</li><li>最後はENTRYで行動を促す</li></ul></div>
-</div>
-<div class="use"><b>RETのLPへの活かし方</b>冒頭の一言と人物写真で、世界観を印象づける見せ方を参考にします。</div>
-<div class="tags"><span>強いコピー</span><span>人物写真</span><span>連番の価値観</span><span>CTAで締め</span></div>
-</div></section>
+    <section id="s3">
+      <div class="w">
+        <div class="no">REFERENCE 03</div>
+        <h2>採用情報｜デジタルマーケティングジャパン</h2>
+        <div class="url">
+          <a href="https://dmj-japan.co.jp/recruit/"
+            >https://dmj-japan.co.jp/recruit/</a
+          >
+        </div>
+        <div class="big">「大人の青春は、やり切った先にある。」</div>
+        <div class="g">
+          <div class="c">
+            <h3>サイトの特徴</h3>
+            <p>
+              力強いキャッチコピーと社員の大きな写真で、熱量を伝える構成。見出しは画像化された文字で、強い存在感を出しています。
+            </p>
+          </div>
+          <div class="c">
+            <h3>構成の流れ</h3>
+            <ul>
+              <li>冒頭のキャッチコピー</li>
+              <li>
+                「大人の青春を創る。」＋5つのCREATE（熱中／挑戦／成長／仲間／充実）
+              </li>
+              <li>CEO MESSAGE</li>
+              <li>MEMBER（人物写真）</li>
+              <li>WE BUILD → ENTRY</li>
+            </ul>
+          </div>
+          <div class="c">
+            <h3>ポイント</h3>
+            <ul>
+              <li>メンバーは「英字名＋一言＋人柄」</li>
+              <li>価値観に連番（#01〜#05）</li>
+              <li>最後はENTRYで行動を促す</li>
+            </ul>
+          </div>
+        </div>
+        <div class="use">
+          <b>RETのLPへの活かし方</b
+          >冒頭の一言と人物写真で、世界観を印象づける見せ方を参考にします。
+        </div>
+        <div class="tags">
+          <span>強いコピー</span><span>人物写真</span><span>連番の価値観</span
+          ><span>CTAで締め</span>
+        </div>
+      </div>
+    </section>
 
-<section id="s4"><div class="w">
-<div class="no">REFERENCE 04</div>
-<h2>Billboard Live</h2>
-<div class="url"><a href="https://www.billboard-live.com/">https://www.billboard-live.com/</a></div>
-<div class="big">MAKE ONE STAGE</div>
-<div class="g">
-<div class="c"><h3>サイトの特徴</h3><p>大きな英文コピーと写真・映像で、ブランドの世界観を見せるシンプルな構成。文字数を絞り、余白で語ります。</p></div>
-<div class="c"><h3>構成の流れ</h3><ul><li>MAKE ONE STAGE（大見出し）</li><li>Our Club（3拠点）</li><li>Dining &amp; Bar</li><li>All For One Stage（想い）</li><li>Magazine → 再びコピーで締め</li></ul></div>
-<div class="c"><h3>ポイント</h3><ul><li>冒頭と末尾で同じコピーを繰り返す</li><li>短い英文を改行で区切って見せる</li><li>写真と短い動画を組み合わせる</li></ul></div>
-</div>
-<div class="use"><b>RETのLPへの活かし方</b>余白と大胆な文字で、ブランドの世界観を伝える見せ方を参考にします。</div>
-<div class="tags"><span>大胆な英文</span><span>余白</span><span>冒頭と末尾で呼応</span><span>写真＋動画</span></div>
-</div></section>
+    <section id="s4">
+      <div class="w">
+        <div class="no">REFERENCE 04</div>
+        <h2>Billboard Live</h2>
+        <div class="url">
+          <a href="https://www.billboard-live.com/"
+            >https://www.billboard-live.com/</a
+          >
+        </div>
+        <div class="big">MAKE ONE STAGE</div>
+        <div class="g">
+          <div class="c">
+            <h3>サイトの特徴</h3>
+            <p>
+              大きな英文コピーと写真・映像で、ブランドの世界観を見せるシンプルな構成。文字数を絞り、余白で語ります。
+            </p>
+          </div>
+          <div class="c">
+            <h3>構成の流れ</h3>
+            <ul>
+              <li>MAKE ONE STAGE（大見出し）</li>
+              <li>Our Club（3拠点）</li>
+              <li>Dining &amp; Bar</li>
+              <li>All For One Stage（想い）</li>
+              <li>Magazine → 再びコピーで締め</li>
+            </ul>
+          </div>
+          <div class="c">
+            <h3>ポイント</h3>
+            <ul>
+              <li>冒頭と末尾で同じコピーを繰り返す</li>
+              <li>短い英文を改行で区切って見せる</li>
+              <li>写真と短い動画を組み合わせる</li>
+            </ul>
+          </div>
+        </div>
+        <div class="use">
+          <b>RETのLPへの活かし方</b
+          >余白と大胆な文字で、ブランドの世界観を伝える見せ方を参考にします。
+        </div>
+        <div class="tags">
+          <span>大胆な英文</span><span>余白</span><span>冒頭と末尾で呼応</span
+          ><span>写真＋動画</span>
+        </div>
+      </div>
+    </section>
 
-<section id="s5"><div class="w">
-<div class="no">SUMMARY</div>
-<h2>4サイトから見えるデザインの方向性</h2>
-<div class="tbl"><table>
-<tr><th>サイト</th><th>取り入れる要素</th><th>LPの該当箇所</th></tr>
-<tr><td>molten</td><td>理念 → 製品の順で見せる</td><td>全体構成</td></tr>
-<tr><td>TRADMAN'S</td><td>素材の質感を大きな写真で</td><td>ビジュアル</td></tr>
-<tr><td>DMJ</td><td>強いコピー＋人物写真</td><td>ファーストビュー</td></tr>
-<tr><td>Billboard Live</td><td>余白と大きな英文</td><td>タイポグラフィ</td></tr>
-</table></div>
-<h2 style="margin-top:40px">LP構成のたたき台</h2>
-<div class="flow">
-<div class="step"><i>1</i><div><b>ファーストビュー<em>DMJ＋Billboard</em></b><span>大きな一言のコピーと、芝の質感が伝わる写真。余白を広くとる。</span></div></div>
-<div class="step"><i>2</i><div><b>想い（Vision）<em>molten</em></b><span>RETが大切にしていることを短い文章で伝える。</span></div></div>
-<div class="step"><i>3</i><div><b>製品の強み<em>molten</em></b><span>強みをカードで整理して見せる。</span></div></div>
-<div class="step"><i>4</i><div><b>ギャラリー<em>TRADMAN'S</em></b><span>施工事例や芝の写真を大きく並べる。</span></div></div>
-<div class="step"><i>5</i><div><b>人（Member）<em>DMJ</em></b><span>人物写真と一言で、人柄や熱量を伝える。</span></div></div>
-<div class="step"><i>6</i><div><b>クロージング<em>Billboard＋DMJ</em></b><span>冒頭のコピーに呼応する一言と、問い合わせボタン。</span></div></div>
-</div>
-<p class="note">※ 本ページは各サイトの公開テキストと構成をもとに整理しています。色味や写真の見え方などビジュアル面は、実際のサイトでご確認ください。上記の構成は仮の案です。</p>
-</div></section>
-<footer><div class="w">リタジャパン LP制作｜参考サイト分析ボード</div></footer>
-</body>
+    <section id="s5">
+      <div class="w">
+        <div class="no">SUMMARY</div>
+        <h2>4サイトから見えるデザインの方向性</h2>
+        <div class="tbl">
+          <table>
+            <tr>
+              <th>サイト</th>
+              <th>取り入れる要素</th>
+              <th>LPの該当箇所</th>
+            </tr>
+            <tr>
+              <td>molten</td>
+              <td>理念 → 製品の順で見せる</td>
+              <td>全体構成</td>
+            </tr>
+            <tr>
+              <td>TRADMAN'S</td>
+              <td>素材の質感を大きな写真で</td>
+              <td>ビジュアル</td>
+            </tr>
+            <tr>
+              <td>DMJ</td>
+              <td>強いコピー＋人物写真</td>
+              <td>ファーストビュー</td>
+            </tr>
+            <tr>
+              <td>Billboard Live</td>
+              <td>余白と大きな英文</td>
+              <td>タイポグラフィ</td>
+            </tr>
+          </table>
+        </div>
+        <p class="note">
+          ※
+          本ページは各サイトの公開テキストと構成をもとに整理しています。色味や写真の見え方などビジュアル面は、実際のサイトでご確認ください。上記の構成は仮の案です。
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="w">リタジャパン LP制作｜参考サイト分析ボード</div>
+    </footer>
+  </body>
 </html>

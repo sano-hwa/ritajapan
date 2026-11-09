@@ -1,50 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RITA Ecology Turf | 激しさに、負けない。</title>
-  <meta name="description" content="深く、やさしく、強い。選手の足を支える人工芝。RITA Ecology Turf">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&family=Oswald:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RITA Ecology Turf | 激しさに、負けない。</title>
+    <meta
+      name="description"
+      content="深く、やさしく、強い。選手の足を支える人工芝。RITA Ecology Turf"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="fv" id="fv">
+      <!-- 背景動画 -->
+      <video
+        class="fv__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="images/movie-poster.jpg"
+      >
+        <source src="movie/movie.mp4?261109" type="video/mp4" />
+      </video>
+      <div class="fv__shade" aria-hidden="true"></div>
 
-  <section class="fv" id="fv">
-    <!-- 背景動画 -->
-    <video class="fv__video" autoplay muted loop playsinline preload="auto" poster="images/movie-poster.jpg">
-      <source src="movie/movie.mp4" type="video/mp4">
-    </video>
-    <div class="fv__shade" aria-hidden="true"></div>
+      <!-- ロゴ -->
+      <header class="fv__header">
+        <a href="/" class="fv__logo"
+          ><img
+            src="images/logo.svg"
+            alt="RITA Ecology Turf"
+            width="334"
+            height="39"
+        /></a>
+      </header>
 
-    <!-- ロゴ -->
-    <header class="fv__header">
-      <a href="/" class="fv__logo"><img src="images/logo.svg" alt="RITA Ecology Turf" width="334" height="39"></a>
-    </header>
+      <!-- キャッチコピー -->
+      <div class="fv__copy">
+        <h1 class="fv__title" aria-label="激しさに、負けない。">
+          <span class="fv__line" aria-hidden="true" data-split>激しさに、</span>
+          <span class="fv__line" aria-hidden="true" data-split>負けない。</span>
+        </h1>
+        <p class="fv__lead"><span>速さで、ゲームを支配する</span></p>
+      </div>
 
-    <!-- キャッチコピー -->
-    <div class="fv__copy">
-      <h1 class="fv__title" aria-label="激しさに、負けない。">
-        <span class="fv__line" aria-hidden="true" data-split>激しさに、</span>
-        <span class="fv__line" aria-hidden="true" data-split>負けない。</span>
-      </h1>
-      <p class="fv__lead"><span>速さで、ゲームを支配する</span></p>
-    </div>
+      <!-- 斜めバンド -->
+      <div class="fv__bands" aria-hidden="true">
+        <p class="fv__band fv__band--1"><span>深く、やさしく、強い。</span></p>
+        <p class="fv__band fv__band--2">
+          <span>選手の足を支える人工芝。</span>
+        </p>
+      </div>
 
-    <!-- 斜めバンド -->
-    <div class="fv__bands" aria-hidden="true">
-      <p class="fv__band fv__band--1"><span>深く、やさしく、強い。</span></p>
-      <p class="fv__band fv__band--2"><span>選手の足を支える人工芝。</span></p>
-    </div>
+      <!-- スクロール誘導 -->
+      <a href="#next" class="fv__scroll"><span>SCROLL</span></a>
+    </section>
 
-    <!-- スクロール誘導 -->
-    <a href="#next" class="fv__scroll"><span>SCROLL</span></a>
-  </section>
+    <section id="next" class="next"></section>
 
-  <section id="next" class="next"></section>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
